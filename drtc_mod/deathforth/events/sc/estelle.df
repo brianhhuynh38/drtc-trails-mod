@@ -1,0 +1,23 @@
+
+cyoa{ road{
+
+cyoa: estelle-despair
+	bully choosechar cicon
+
+		"Estelle" cyoa-title!
+		($ cname .. " gets a call on her new Enigma.
+		" .. "Hey, we have like 20 more guild postings over here. Please come back." rbold .. "
+		Estelle, now empowered by the primal urge to complete her sidequests, rushes off to the bracer guild in true protagonist fashion." $) cyoa-text! 
+		solo if 
+			($ "And so, the trip to Canada was abandoned.
+			" .. "THE TRIP TO CANADA IS OVER" rbold $) +cr +text
+		else
+			($ "She waves goodbye to everyone, then jumps through a portal that leads back to the Zemurian continent.
+			" .. cname .. " has left the team!" $) +cr +text
+		then
+		decruit-bad
+;
+
+} }
+
+

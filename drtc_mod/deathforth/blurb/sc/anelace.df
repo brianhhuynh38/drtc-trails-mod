@@ -1,0 +1,44 @@
+	: ANELACE-oneline1 "Cuteness is justice! It's the law!" ;
+	: ANELACE-oneline2 "Fortune favors the cute!" ;
+	: ANELACE-oneline3 "Keep your friends close and your plushies closer" ;
+	: ANELACE-oneline4 "Zzzzzzzzzzzzzzzzzz" ;
+	: ANELACE-oneline5 "Does Canada have cute girls?" ;
+	: ANELACE-oneline6 "What's a girl gotta do to get plushies to pop up out of nowhere?" ;
+	: ANELACE-oneline7 "Any of you rookies wanna join me for some training?" ;
+	: ANELACE-oneline8 "Has anyone seen Tita around here?" ;
+	: ANELACE-oneline9 "So I've been looking for this really rare Landmore limited edition pushie..." ;
+	: ANELACE-oneline10 "Let's go!" ;
+	: ANELACE-oneline11 "Roger!" ;
+	: ANELACE-oneline12 "I AM INVINCIBLE! or am I?" ;
+
+	deck-new
+		card: ANELACE-oneline1
+		card: ANELACE-oneline2
+		card: ANELACE-oneline3
+		card: ANELACE-oneline4
+		card: ANELACE-oneline5
+		card: ANELACE-oneline6
+		card: ANELACE-oneline7
+		card: ANELACE-oneline8
+		card: ANELACE-oneline9
+		card: ANELACE-oneline10
+		card: ANELACE-oneline11
+		card: ANELACE-oneline12
+
+	constant ANELACE-ONELINERS
+	ANELACE-ONELINERS var anelace-oneliners
+	ANELACE-ONELINERS shuffles to anelace-oneliners
+
+: anelace-oneliner
+	anelace-oneliners depths 0= if ANELACE-ONELINERS shuffles to anelace-oneliners then
+	blurbslot 0= if
+		drawcard blurbsay
+	then
+;
+
+	deck-new
+	12 cards: anelace-oneliner
+
+	constant BLURB-ANELACE-DECK
+	BLURB-ANELACE-DECK var blurb-anelace-deck
+	BLURB-ANELACE-DECK shuffles to blurb-anelace-deck

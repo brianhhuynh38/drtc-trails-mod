@@ -1,0 +1,45 @@
+	: ESTELLE-oneline1 "Wait, so you guys don't use orbments?" ;
+	: ESTELLE-oneline2 "What the heck is even going on in this place?" ;
+	: ESTELLE-oneline3 "I wonder what Joshua is doing?" ;
+	: ESTELLE-oneline4 "Why can't I build CP here?" ;
+	: ESTELLE-oneline5 "What is a Canada?" ;
+	: ESTELLE-oneline6 "Powered by...electricity?" ;
+	: ESTELLE-oneline7 "How come none of my stuff works here?" ;
+	: ESTELLE-oneline8 "The produce here isn't exactly as refreshing as I was hoping it'd be." ;
+	: ESTELLE-oneline9 "I wish I could cast Earth Wall here..." ;
+	: ESTELLE-oneline10 "We're good to go!" ;
+	: ESTELLE-oneline11 "I gotta get to S-rank bracer eventually..." ;
+	: ESTELLE-oneline12 "How much BP do you think I get out of this?" ;
+	: ESTELLE-oneline13 "If I die here, do I get to hit retry or...?" ;
+
+	deck-new
+		card: ESTELLE-oneline1
+		card: ESTELLE-oneline2
+		card: ESTELLE-oneline3
+		card: ESTELLE-oneline4
+		card: ESTELLE-oneline5
+		card: ESTELLE-oneline6
+		card: ESTELLE-oneline7
+		card: ESTELLE-oneline8
+		card: ESTELLE-oneline9
+		card: ESTELLE-oneline10
+		card: ESTELLE-oneline11
+		card: ESTELLE-oneline12
+		card: ESTELLE-oneline13
+	constant ESTELLE-ONELINERS
+	ESTELLE-ONELINERS var estelle-oneliners
+	ESTELLE-ONELINERS shuffles to estelle-oneliners
+
+: estelle-oneliner
+	estelle-oneliners depths 0= if ESTELLE-ONELINERS shuffles to estelle-oneliners then
+	blurbslot 0= if
+		drawcard blurbsay
+	then
+;
+
+	deck-new
+	13 cards: estelle-oneliner
+
+	constant BLURB-ESTELLE-DECK
+	BLURB-ESTELLE-DECK var blurb-estelle-deck
+	BLURB-ESTELLE-DECK shuffles to blurb-estelle-deck

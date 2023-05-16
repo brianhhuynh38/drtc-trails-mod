@@ -1,0 +1,7 @@
+data/
+prog.exe
+SDL2.dll
+SDL2_mixer.dll
+smpeg2.dll
+steam_api.dll
+steam_wrapper.dll

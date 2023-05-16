@@ -1,0 +1,21 @@
+
+cyoa{ road{
+
+cyoa: anelace-despair
+	bully choosechar cicon
+
+		"Anelace" cyoa-title!
+		($ "After coming so far without seeing any cuties " .. cname .. " decides to end her journey" $) cyoa-text! 
+		solo if 
+			($ "And so, the trip to Canada was abandoned.
+			" .. "THE TRIP TO CANADA IS OVER" rbold $) +cr +text
+		else
+			($ "She rushes into a portal that leads back to the Zemurian continent and her plushie collection.
+			" .. cname .. " has left the team!" $) +cr +text
+		then
+		decruit-bad
+;
+
+} }
+
+
