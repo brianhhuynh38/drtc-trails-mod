@@ -1,0 +1,1241 @@
+
+:map 0 
+:tags  
+:size 11 7 
+:off 4 1 
+:tiles 
+22222222222
+23333333332
+21111111112
+21111111112
+21111111112
+22222222222
+33333333333
+
+:map 1 
+:tags hall  
+:scriptA hallset 
+:size 8 7 
+:off 7 3 
+:tiles 
+22222222
+23333332
+211A1112
+211B1A12
+21A11112
+22222222
+33333333
+
+:map 2 
+:tags kitchen 1  
+:scriptA nkitchenset 
+:size 8 8 
+:off 5 2 
+:tiles 
+00044000
+02222220
+22333322
+231AA132
+21111112
+22111122
+32222223
+03333330
+
+:map 3 
+:tags bathroom 1  
+:scriptA nbathsetsmall 
+:size 8 8 
+:off 6 0 
+:tiles 
+00044000
+02222220
+22333322
+231AA132
+21111112
+22111122
+32222223
+03333330
+
+:map 4 
+:tags hall  
+:scriptA hallset 
+:size 9 7 
+:off 6 1 
+:tiles 
+222222222
+233333332
+211111112
+21A1ABA12
+211111112
+222222222
+333333333
+
+:map 5 
+:tags living 1  
+:scriptA only-chosen; diningset 
+:scriptB livingset 
+:size 11 9 
+:off 5 9 
+:tiles 
+22222222222
+23333333332
+21111111112
+21111111112
+211A111B112
+21111111112
+21111111112
+22222222222
+33333333333
+
+:map 6 
+:tags entry  
+:scriptA livingset 
+:size 11 8 
+:off 4 1 
+:tiles 
+22222222222
+23333333332
+21111111112
+211A1ABA112
+21111111112
+21112221112
+22222322222
+33333033333
+
+:map 7 
+:tags entry  
+:scriptA hallset 
+:scriptB chair 
+:size 11 7 
+:off 4 1 
+:tiles 
+22222222222
+23333333332
+21111111112
+211ACBBA112
+21111111112
+22222222222
+33333333333
+
+:map 8 
+:tags entry  
+:scriptA hallset 
+:size 7 9 
+:off 8 1 
+:tiles 
+2222222
+2233322
+2311132
+2111112
+21AAA12
+211B112
+2211122
+2222222
+3333333
+
+:map 9 
+:tags entry  
+:scriptB livingset 
+:size 7 7 
+:off 8 2 
+:tiles 
+2222222
+2333332
+2111112
+21AB112
+2111112
+2222222
+3333333
+
+:map 10 
+:tags entry  
+:scriptA only-chosen; livingset 
+:scriptB w edge-inc w random-door 
+:scriptC e edge-inc e random-door 
+:size 5 10 
+:off 9 0 
+:tiles 
+22222
+23332
+21112
+21A12
+21BC2
+21A12
+21D12
+21112
+22222
+33333
+
+:map 11 
+:tags entry  
+:scriptA dhall 
+:scriptB livingset 
+:size 5 8 
+:off 9 1 
+:tiles 
+22222
+23332
+21112
+21A12
+21B12
+21112
+22222
+33333
+
+:map 12 
+:tags entry  
+:scriptA only-chosen; livingset 
+:scriptB n edge-inc n dhall 
+:size 11 8 
+:off 4 1 
+:tiles 
+22220002222
+23322222332
+21B33333112
+21111A11112
+21A11111A12
+21122222112
+22223332222
+33330003333
+
+:map 13 
+:tags entry  
+:scriptB hallset 
+:size 6 7 
+:off 9 2 
+:tiles 
+222222
+233332
+211A12
+21BB12
+211112
+222222
+333333
+
+:map 14 
+:tags entry  
+:scriptA only-chosen; chair 
+:scriptB hallset 
+:size 8 9 
+:off 8 1 
+:tiles 
+00222200
+02233220
+22311322
+231A1132
+211BA112
+221AC122
+32211223
+03222230
+00333300
+
+:map 15 
+:tags entry  
+:scriptA w edge-inc w random-inset-door 
+:scriptB e edge-inc e random-inset-door 
+:size 6 10 
+:off 9 1 
+:tiles 
+022220
+023320
+021120
+221122
+231132
+21AB12
+21C112
+211112
+222222
+333333
+
+:map 16 
+:tags hall  
+:scriptA hallset 
+:scriptB -1 column-door "hall" with-door 
+:size 7 12 
+:off 6 0 
+:tiles 
+2222222
+2333332
+2111112
+211A112
+2211122
+3211123
+0211B20
+0211120
+0222620
+0332120
+0002220
+0003330
+
+:map 17 
+:tags hall  
+:scriptA hallset 
+:scriptB n edge-inc n dhall 
+:size 5 8 
+:off 8 2 
+:tiles 
+22222
+23332
+21112
+2BA12
+21112
+21112
+22222
+33333
+
+:map 18 
+:tags hall  
+:scriptA hallset 
+:scriptB only-chosen; livingset 
+:size 7 8 
+:off 7 2 
+:tiles 
+2222222
+2333332
+2111112
+211A112
+211A112
+2111112
+2222222
+3333333
+
+:map 19 
+:tags living 2  
+:scriptA livingset 
+:size 7 10 
+:off 7 0 
+:tiles 
+2222222
+2333332
+2111112
+2111112
+211A112
+211A112
+2111112
+2111112
+2222222
+3333333
+
+:map 20 
+:tags living 3  
+:scriptA livingset 
+:size 9 9 
+:off 7 9 
+:tiles 
+022222220
+223333322
+231111132
+211111112
+2111A1112
+211111112
+221111122
+322222223
+033333330
+
+:map 21 
+:tags living 4  
+:scriptA livingset 
+:scriptB livingset 
+:size 9 9 
+:off 8 9 
+:tiles 
+222222222
+233333332
+211111112
+211111112
+2111A1112
+211111112
+211111112
+222222222
+333333333
+
+:map 22 
+:tags living 5  
+:scriptA livingset 
+:scriptB n edge-inc n random-inset-door 
+:scriptC -1 column-door "hall" with-door 
+:scriptD rndliving 
+:size 9 12 
+:off 7 3 
+:tiles 
+000222000
+000232000
+000212000
+222262222
+233363332
+211111112
+21111B112
+2111A1112
+2111C1112
+211111112
+222222222
+333333333
+
+:map 23 
+:tags bathroom 2  
+:scriptA nbathsettiny 
+:size 7 8 
+:off 8 1 
+:tiles 
+0004000
+0222220
+0233320
+221A122
+2311132
+2111112
+2222222
+3333333
+
+:map 24 
+:tags bathroom 3  
+:scriptA nbathsetsmall 
+:size 9 7 
+:off 8 2 
+:tiles 
+000040000
+022222220
+223333322
+231AAA132
+211111112
+222222222
+333333333
+
+:map 25 
+:tags bathroom 4  
+:scriptA nbathsetsmall 
+:scriptB chair 
+:size 8 9 
+:off 7 2 
+:tiles 
+00004000
+02222220
+02333322
+02AAAA32
+42111112
+021B1112
+02111112
+02222222
+03333333
+
+:map 26 
+:tags bathroom 5  
+:scriptA nbathsettiny 
+:size 7 7 
+:off 8 1 
+:tiles 
+0040000
+0222220
+2233320
+231A124
+2111120
+2222220
+3333330
+
+:map 27 
+:tags kitchen 2  
+:scriptA kitchenset 
+:scriptB rndkitchen 
+:scriptC fridge 
+:size 9 10 
+:off 5 0 
+:tiles 
+000040000
+022222220
+223333322
+231A1A132
+211111112
+211C1B112
+211111112
+221111122
+322222223
+033333330
+
+:map 28 
+:tags kitchen 3  
+:scriptA kitchenset 
+:scriptB rndkitchen 
+:scriptC fridge 
+:size 11 8 
+:off 5 2 
+:tiles 
+00004440000
+02222222220
+22333333322
+231A1C1A132
+21111B11112
+21111111112
+22222222222
+33333333333
+
+:map 29 
+:tags kitchen 4  
+:scriptA kitchenset 
+:scriptB rndkitchen 
+:scriptC fridge 
+:size 8 9 
+:off 6 0 
+:tiles 
+00040000
+02222220
+22333322
+231A1132
+21111112
+211C1112
+22111122
+32222223
+03333330
+
+:map 30 
+:tags kitchen 5  
+:scriptA kitchenset 
+:scriptB rndkitchen 
+:scriptC fridge 
+:size 8 9 
+:off 7 0 
+:tiles 
+00040000
+02222220
+22333322
+231AA132
+21111112
+2111C112
+21111112
+22222222
+33333333
+
+:map 31 
+:tags bedroom 1  
+:scriptA nbedset 
+:scriptB rndhshelf 
+:size 9 10 
+:off 5 1 
+:tiles 
+000040000
+022222220
+223333322
+2311A1132
+211111112
+2111B1112
+211111112
+221111122
+322222223
+033333330
+
+:map 32 
+:tags bedroom 2  
+:scriptA bedset 
+:scriptB rndshelf 
+:size 8 8 
+:off 5 2 
+:tiles 
+02222220
+22333322
+23111132
+211AA112
+211AA112
+22111122
+32222223
+03333330
+
+:map 33 
+:tags bedroom 3  
+:scriptA bedset 
+:scriptB rndhshelf 
+:size 9 9 
+:off 5 1 
+:tiles 
+000040000
+022222220
+223333322
+231BBB132
+211111112
+2111A1112
+211111112
+222222222
+333333333
+
+:map 34 
+:tags bedroom 4  
+:scriptA bedset 
+:size 8 9 
+:off 5 1 
+:tiles 
+22222222
+23333332
+21111112
+21111112
+211AA112
+21111112
+21111112
+22222222
+33333333
+
+:map 35 
+:tags bedroom 5  
+:scriptA bedset 
+:scriptB rndshelf 
+:size 8 9 
+:off 7 1 
+:tiles 
+02222220
+22333322
+23111132
+21111112
+211AA112
+21111112
+22111122
+32222223
+03333330
+
+:map 36 
+:tags death  
+:scriptA 50 80 rnd zombs 
+:size 8 9 
+:off 8 2 
+:tiles 
+22222222
+23333332
+21111112
+21111112
+21111112
+2111A112
+21111112
+22222222
+33333333
+
+:map 37 
+:tags entry  
+:scriptA -1 column-door "hall" with-door 
+:scriptB n edge-inc n random-inset-door 
+:size 8 10 
+:off 6 0 
+:tiles 
+02220000
+02320000
+02120000
+02620000
+22622222
+23633332
+21A1B112
+21111112
+22222222
+33333333
+
+:map 38 
+:tags closet  
+:scriptA 0 10 rnd zombs 
+:size 3 5 
+:off 2 2 
+:tiles 
+222
+232
+2A2
+222
+333
+
+:map 39 
+:tags kitchen 6  
+:scriptA diningset 
+:scriptB nkitchenset 
+:size 9 10 
+:off 5 0 
+:tiles 
+000040000
+000000000
+022222220
+223333322
+2311B1132
+211111112
+2111A1112
+211111112
+222222222
+333333333
+
+:map 40 
+:tags hall  
+:size 9 5 
+:off 3 2 
+:tiles 
+222222222
+233333332
+211111112
+222222222
+333333333
+
+:map 41 
+:tags living 6  
+:scriptA livingset 
+:size 10 11 
+:off 2 0 
+:tiles 
+0222222220
+0233333320
+2211111122
+2311111132
+2111111112
+2111AA1112
+2111111112
+2211111122
+3211111123
+0222222220
+0333333330
+
+:map 42 
+:tags bedroom 6  
+:scriptA nbedset 
+:size 9 8 
+:off 3 1 
+:tiles 
+000004000
+022222220
+023333320
+221111122
+2311A1132
+211111112
+222222222
+333333333
+
+:map 43 
+:tags bathroom 6  
+:scriptA nbathsetsmall 
+:size 9 8 
+:off 4 5 
+:tiles 
+000040000
+022222220
+223333322
+231AAA132
+211111112
+211111112
+222222222
+333333333
+
+:map 44 
+:tags hall  
+:size 7 5 
+:off 3 2 
+:tiles 
+2222222
+2333332
+2111112
+2222222
+3333333
+
+:map 45 
+:tags hall  
+:size 3 8 
+:off 7 2 
+:tiles 
+222
+232
+212
+212
+212
+212
+222
+333
+
+:map 46 
+:tags hall  
+:size 4 8 
+:off 7 2 
+:tiles 
+2222
+2332
+2112
+2112
+2112
+2112
+2222
+3333
+
+:map 47 
+:tags hall  
+:size 5 7 
+:off 7 3 
+:tiles 
+22222
+23332
+21112
+21112
+21112
+22222
+33333
+
+:map 48 
+:tags hall  
+:size 8 10 
+:off 7 1 
+:tiles 
+00222200
+00233200
+22211222
+23311332
+2111A112
+211A1112
+22211222
+33211233
+00222200
+00333300
+
+:map 49 
+:tags living 7  
+:scriptA livingset 
+:scriptB rndliving 
+:size 12 9 
+:off 6 2 
+:tiles 
+222220000000
+233322222220
+211123333320
+211131111120
+21B1111A1124
+211121111120
+211122222220
+222223333330
+333330000000
+
+:map 50 
+:tags living 8  
+:scriptA livingset 
+:size 8 10 
+:off 6 12 
+:tiles 
+22222222
+23333332
+21111112
+21111112
+2111A112
+211A1112
+21111112
+21111112
+22222222
+33333333
+
+:map 51 
+:tags living 9  
+:scriptA livingset 
+:size 9 10 
+:off 5 9 
+:tiles 
+002222200
+022333220
+223111322
+231111132
+2111A1112
+2111A1112
+221111122
+322111223
+032222230
+003333300
+
+:map 52 
+:tags living 10  
+:scriptA nlivingset 
+:size 9 9 
+:off 7 9 
+:tiles 
+000440000
+022222220
+223333322
+231A1A132
+211111112
+211111112
+221111122
+322222223
+033333330
+
+:map 53 
+:tags living 11  
+:scriptA nlivingset 
+:scriptB rndliving 
+:size 9 10 
+:off 6 3 
+:tiles 
+000444000
+222222220
+223333322
+2311A1132
+211111112
+211111112
+211BBB112
+211111112
+222222222
+333333333
+
+:map 54 
+:tags bedroom 7  
+:scriptA bedset 
+:scriptB rndbed 
+:size 9 9 
+:off 6 1 
+:tiles 
+022222220
+223333322
+231111132
+211111112
+2111A1112
+211111112
+221111122
+322222223
+033333330
+
+:map 55 
+:tags bedroom 8  
+:scriptA bedset 
+:scriptB rndbed 
+:size 9 9 
+:off 6 0 
+:tiles 
+222202222
+233222332
+211333112
+211111112
+2111A1112
+211111112
+211222112
+222232222
+333303333
+
+:map 56 
+:tags bedroom 9  
+:scriptA bedset 
+:size 7 10 
+:off 7 1 
+:tiles 
+2222222
+2333332
+2111112
+2111112
+211A112
+211A112
+2111112
+2111112
+2222222
+3333333
+
+:map 57 
+:tags bedroom 10  
+:scriptA bedset 
+:size 8 9 
+:off 7 1 
+:tiles 
+22222222
+23322332
+21133112
+21111112
+211AA112
+21111112
+21122112
+22222222
+33333333
+
+:map 58 
+:tags bedroom 11  
+:scriptA bedset 
+:size 8 10 
+:off 6 1 
+:tiles 
+22222222
+23333332
+21111112
+21111112
+211AA112
+211AA112
+21111112
+21111112
+22222222
+33333333
+
+:map 59 
+:tags treasure  
+:scriptA rndloot 
+:size 7 7 
+:off 2 1 
+:tiles 
+2222222
+2333332
+2111112
+21AAA12
+2111112
+2222222
+3333333
+
+:map 60 
+:tags stairwell  
+:scriptA w edge-inc w 2 random-doors "bed 
+:scriptB e edge-inc e 2 random-doors "bed 
+:size 6 13 
+:off 7 0 
+:tiles 
+222222
+233332
+211112
+226622
+326623
+226622
+236632
+21AB12
+226622
+326623
+021120
+022220
+033330
+
+:map 61 
+:tags aptlobby  
+:scriptA dnapt 
+:size 10 11 
+:off 5 0 
+:tiles 
+0002222000
+0002332000
+0002112000
+0002662000
+2222662222
+2333663332
+2111111112
+2111A11112
+2111111112
+2222222222
+3333333333
+
+:map 62 
+:tags danger  
+:scriptA rnddanger 
+:scriptB rndloot 
+:size 7 7 
+:off 8 2 
+:tiles 
+2222222
+2333332
+2111112
+21ABA12
+2111112
+2222222
+3333333
+
+:map 63 
+:tags living 12  
+:scriptA livingset 
+:scriptB diningset 
+:scriptC rnd5050 rndliving 
+:size 13 9 
+:off 5 15 
+:tiles 
+2222222222222
+2333332333332
+2111112111112
+2111113111112
+211A11111B112
+2111112111112
+2111112111112
+2222222222222
+3333333333333
+
+:map 64 
+:tags living 13  
+:scriptA livingset 
+:scriptB diningset 
+:scriptC rndliving 
+:size 11 19 
+:off 3 0 
+:tiles 
+00022222000
+00023332000
+00021112000
+00021C12000
+00021112000
+02222122220
+02333133320
+02111111120
+02111111120
+42A11111B24
+02111111120
+02111111120
+02222122220
+03323132330
+00021112000
+00021C12000
+00021112000
+00022222000
+00033333000
+
+:map 65 
+:tags living 14  
+:scriptA livingset 
+:scriptB diningset 
+:scriptC rnd5050 rndliving 
+:size 9 16 
+:off 4 3 
+:tiles 
+222222222
+233333332
+211111112
+211111112
+2111A1112
+211111112
+222111222
+222111222
+2221C1222
+233111332
+211111112
+2111B1112
+211111112
+211111112
+222222222
+333333333
+
+:map 66 
+:tags living 15  
+:scriptA livingset 
+:scriptB diningset 
+:scriptC rnd5050 rndliving 
+:size 9 14 
+:off 4 5 
+:tiles 
+222222222
+233333332
+211111112
+211111112
+2111B1112
+211111112
+222111222
+233111332
+211111112
+2111A1112
+211111112
+211111112
+222222222
+333333333
+
+:map 67 
+:tags bedroom 12  
+:scriptA bedset 
+:size 9 9 
+:off 5 1 
+:tiles 
+222222222
+233333332
+211111112
+211111112
+2111A1112
+211111112
+211111112
+222222222
+333333333
+
+:map 68 
+:tags bedroom 13  
+:scriptA bedset 
+:size 8 8 
+:off 5 1 
+:tiles 
+22222222
+23333332
+21111112
+211AA112
+211AA112
+21111112
+22222222
+33333333
+
+:map 69 
+:tags bedroom 14  
+:scriptA bedset 
+:scriptB rndhshelf 
+:scriptC rndbed 
+:size 12 9 
+:off 6 1 
+:tiles 
+222222222220
+233333333320
+21111111B120
+211111211120
+2111A1211124
+21111131C120
+211111111120
+222222222220
+333333333330
+
+:map 70 
+:tags bedroom 15  
+:scriptA bedset 
+:scriptB rndbed 
+:size 11 11 
+:off 4 1 
+:tiles 
+22222222222
+23333323332
+21111121112
+21111131112
+21111111112
+21111121B12
+2111A122222
+21111123333
+22222220000
+33333330000
+00004000000
+
+:map 71 
+:tags bathroom 7  
+:scriptA nbathset 
+:size 11 8 
+:off 3 3 
+:tiles 
+00000400000
+02222222220
+22333333322
+23111A11132
+21111111112
+21111111112
+22222222222
+33333333333
+
+:map 72 
+:tags bathroom 8  
+:scriptA nbathset 
+:size 11 8 
+:off 3 3 
+:tiles 
+00000400000
+02222222220
+22333333322
+23111A11132
+21111111112
+22111111122
+32222222223
+03333333330
+
+:map 73 
+:tags bathroom 9  
+:scriptA nbathsetsmall 
+:scriptB only-chosen; bathloot 
+:size 9 9 
+:off 4 5 
+:tiles 
+000040000
+022222220
+223333322
+2311A1132
+211111112
+211BBB112
+221111122
+322222223
+033333330
+
+:map 74 
+:tags bathroom 10  
+:scriptA nbathsetsmall 
+:size 10 9 
+:off 3 6 
+:tiles 
+2222000000
+2332000000
+2112222220
+2112333322
+221311A132
+3211111112
+0222222222
+0333333333
+0000400000
