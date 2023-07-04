@@ -1,5 +1,54 @@
+cyoa{ mission{
+
+cyoa: anelace-survived
+	"After the Battle" cyoa-title!
+	131 stpick if 
+		choosechar cicon 
+		($ Thegroup .. " exits the arena after " .. ghis .. " long series of battles. 
+			As a reward for overcoming the trial, " .. thegroup .. " was given a large amount of food as well as a strange shiny gem. It did not seem to have any use so " .. thegroup .. " threw it away." $) text! 
+			30 40 rnd trunk-food+
+			morale3+all
+			($ cname .. " notices her sword start to shine!" rbold $) +crtext
+			WEAPON_TRUEJINU_T cchar .weapona! 1 cchar .weapon_nodropa!
+			WEAPON_TRUEJINU_S cchar .weaponb! 1 cchar .weapon_nodropb!
+	else 
+		($ Thegroup .. " exits the arena after " .. ghis .. " long series of battles. 
+			As a reward for overcoming the trial, " .. thegroup .. " was given a large amount of food as well as a strange shiny gem. It did not seem to have any use so " .. thegroup .. " threw it away." $) text! 
+			30 40 rnd trunk-food+
+			morale3+all
+	then
+;
+
+} }
 
 cyoa{ road{
+
+cyoa-choice: nightmare-arena-yes
+	($ Thegroup .. " steps into the arena and find out its filled with zombies!" $) text!
+		2.8 18 20 rnd 0.5 siegecast // untouched
+		"events/siege/region/anelace.df" $load-region
+		choice( "Try to Survive" )choice: premission
+;
+
+cyoa-choice: nightmare-arena-no
+	($ Thegroup .. " decides to exit the mysterious door." $) text!
+	($ "It was probably a scam anyways. " $) +crtext
+;
+
+cyoa: nightmare-arena
+	131 stpick if choosechar cicon else ($ "Looks like " .. "Anelace" pbold .. " is no longer around." $) text! exit 
+then
+	"Sun Door 3" cyoa-title!
+	
+	($ Thegroup .. " comes across a mysterious glowing door with a sun symbol. They impulsively open the door and find nothing but darkness and a well dressed man." $) text!
+
+	($ "Ah! Good day to you. The place you're about to enter is an arena where history's strongest warriors gather and eagerly await new challengers. I must warn you, however, that this is a martial arts tournament like no other--only the best may compete. " rbold $) +crtext
+
+	($ "So, what do you say? Would you be interested in joining us?" rbold $) +crtext
+
+	cchar choice( "YEAH!" )choice: nightmare-arena-yes
+	choice( "nah" )choice: nightmare-arena-no
+;
 
 cyoa: anelace-despair
 	bully choosechar cicon

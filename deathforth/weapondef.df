@@ -4094,23 +4094,44 @@ WEAPON_RAPIER clone-to: Jinu (Thrust)
 	spriteid: MELEE7 80 +
 	half-fatigue
 	power: 3
+	knockback: 0
+	cooldown: 0
+	melee_extra_hits: 1
+	melee_extra_chance: 1
+	Atier
+
+
+WEAPON_NKATANA clone-to: Jinu (Slash)
+	weapon: jinu_s
+	spriteid: MELEE7 80 +
+	power: 3.5
+	knockback: 0.6
+	cooldown: 0.5
+	melee_extra_hits: 3
+	melee_extra_chance: 1
+	Atier
+
+WEAPON_RAPIER clone-to: True Jinu (Thrust)
+	weapon: truejinu_t
+	spriteid: MELEE7 81 +
+	half-fatigue
+	power: 4
 	knockback: 0.25
 	cooldown: 0
 	melee_extra_hits: 2
 	melee_extra_chance: 1
-	Atier
+	Stier
 
 
-WEAPON_NINJA clone-to: Jinu (Swing)
-	weapon: jinu_s
-	spriteid: MELEE7 80 +
-	power: 3.5
-	knockback: 0.5
-	cooldown: 0.5
-	melee_extra_hits: 4
+WEAPON_NKATANA clone-to: True Jinu (Slash)
+	weapon: truejinu_s
+	spriteid: MELEE7 81 +
+	power: 4.5
+	knockback: 1
+	cooldown: 0.6
+	melee_extra_hits: 5
 	melee_extra_chance: 1
-	Atier
-
+	Stier
 
 WEAPON_DEVILFORK clone-to: Hot poker
 	weapon: hotpoker
