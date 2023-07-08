@@ -89,6 +89,7 @@ statmod{
 	enum MOD_PETMALUS
 	enum MOD_ESTELLE
 	enum MOD_ANELACE
+	enum MOD_CASSIUS
 	
 	enum MOD_HAGGLER
 	enum MOD_PATHFINDER
@@ -733,16 +734,15 @@ dup constant MOD_COUNT modcount?!
 		; last animate!
 
 	MOD_ANELACE #set
-		: anelacesay 1 9 rnd case
+		: anelacesay 1 8 rnd case
 			1 of "YAAAAAHH!" endof
 			2 of "HUH!" endof
-			3 of "CUTENESS IS JUSTICE!" endof
+			3 of "HYAH!" endof
 			4 of "YOU'RE GOING DOWN!" endof
 			5 of "Oh yeah!" endof
 			6 of "I'm just warming up!" endof
 			7 of "Here I go!" endof
 			8 of "You're done!" endof
-			9 of "HYAH!" endof
 		endcase ;
 
 		: wisewords
@@ -761,6 +761,13 @@ dup constant MOD_COUNT modcount?!
 			eventid THING_EVENT_SWING = if wisewords then
 		; last animate!
 			
+	MOD_CASSIUS #set
+
+		: swap-attack-commands to me
+			me .isswap? not if 0 me .slotuse! then;
+			1 me .slotuse!
+			me .attack
+		; last command!
 
 	MOD_SHODUKIN #set
 		mission{
