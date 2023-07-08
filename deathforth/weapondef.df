@@ -4133,6 +4133,28 @@ WEAPON_NKATANA clone-to: True Jinu (Slash)
 	melee_extra_chance: 1
 	Stier
 
+WEAPON_MODSPEAR clone-to: Cassius' Staff (Thrust)
+	weapon: cassiusstaff_t
+	spriteid: MELEE7 82 +
+	half-fatigue
+	power: 2
+	knockback: 1
+	cooldown: 0
+	melee_extra_hits: 3
+	melee_extra_chance: 1
+	Stier
+
+
+WEAPON_ZWEI clone-to: Cassius' Staff (Swing)
+	weapon: cassiusstaff_s
+	spriteid: MELEE7 82 +
+	power: 2.5
+	knockback: 4
+	cooldown: 0.6
+	melee_extra_hits: 5
+	melee_extra_chance: 1
+	Stier
+
 WEAPON_DEVILFORK clone-to: Hot poker
 	weapon: hotpoker
 	spriteid: MELEE6 22 +

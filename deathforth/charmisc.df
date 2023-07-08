@@ -351,6 +351,33 @@ drop ;
 	drop
 ;
 
+: .cassius
+	132 over .specialtype!
+	6 over .shooting!
+	6 over .fitness!
+	6 over .strength!
+	6 over .composure!
+	6 over .mechanical!
+	6 over .medical!
+	6 over .loyalty!
+	6 over .wits!
+	6 over .attitude!
+	6 over .health!
+	6 over .vitality!
+	0.2 over .speed_bonus!
+	2 over .carrying.slot_count!
+	0 over .female!
+	"Cassius" over .name!
+	"is a lieutenant general in the Royal Army of Liberl and a former S-rank bracer." over .job!
+	WEAPON_CASSIUSSTAFF_T over .weapona!
+	1 over .weapon_nodropa!
+	WEAPON_CASSIUSSTAFF_S over .weaponb!
+	1 over .weapon_nodropb!
+	statmod{ MOD_CASSIUS over .setmod } dup .swapspecial
+	// dup .nodropweapon
+	drop
+;
+
 
 // Turn char to hulk colour
 : .hulkclr args( chara )
