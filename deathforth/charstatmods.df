@@ -90,6 +90,7 @@ statmod{
 	enum MOD_ESTELLE
 	enum MOD_ANELACE
 	enum MOD_CASSIUS
+	enum MOD_TITA
 	
 	enum MOD_HAGGLER
 	enum MOD_PATHFINDER
@@ -1542,6 +1543,26 @@ char-event: valk-main-events
 	1 over .weapon_nodropb!
 	statmod{ MOD_ANELACE over .setmod } dup .swapspecial
 	// dup .nodropweapon
+	drop
+;
+
+: .titaify
+	133 over .specialtype!
+	1 over .female!
+	4 over .shooting!
+	2 over .fitness!
+	2 over .strength!
+	4 over .composure!
+	10 over .mechanical!
+	1 over .medical!
+	6 over .loyalty!
+	6 over .wits!
+	5 over .attitude!
+	"A mechanic at the Zeiss Central Factory with a real knack for anything orbal. This may not apply to electricity." over .job!
+	1 over .carrying.slot_count!
+	TITA_CANNON over .weapona!
+	1 over .weapon_nodropa!
+	statmod{ MOD_ANELACE over .setmod } dup .swapspecial
 	drop
 ;
 

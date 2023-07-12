@@ -4646,6 +4646,7 @@ root{
 : #gigaman gigaman .item.charges! ;
 : gigaman 100 #gigaman ; }
 
+
 WEAPON_BIGLOG clone-to: Giant Club
 	spriteid: MELEE7 0x c +
 	weapon: giantclub
@@ -5735,6 +5736,135 @@ custom: Grenade Launcher
 	stack_no_show: 0
 	shoot_thru_scale: 1
 	lowestmelee
+
+	melee_start_angle: 0
+	melee_windup_angle: -90
+	melee_end_angle: 120
+
+	melee_aiming: 1
+	melee_weapon_angle: 0
+
+	melee_range_hint: 0
+	150 range_guess!
+
+	0 custom_retract!
+	heavycooldown
+	ai_mule
+
+	20 constant GLAUNCH_COOLDOWN // formerly 30, wanted to make it faster than bazooka
+	GLAUNCH_COOLDOWN 5 + constant GRENADE_TIME
+
+
+	: _grenade-shell-events args( me eventid )
+
+		<- eventid THING_EVENT_BOUNCE = if
+			<- me .angle@ <- me .rot@ + <- me .angle!
+		then
+
+		<- eventid THING_EVENT_TIMER = if
+		// <- eventid THING_EVENT_BUMP = or - Removed due to making it way dangerous
+			<- me .pos 1 xypowboom // grenade is 5, pipebomb is 2, lbomb is 1
+			<- me silentkillit
+			then
+	;
+
+	// Mostly adapted from grenade weapon
+	: setup-grenade-shell args( shooter shell )
+		' _grenade-shell-events <- shell .events!
+
+		1 <- shell .mass!
+		15 <- shell .hitpoints!
+		1 <- shell .lob_mode!
+		0.1 <- shell .mass!
+		1 <- shell .no_hit!
+		90 <- shooter .flipx * <- shell .rot!
+		1 <- shell .item.locked!
+
+		<- shooter .aim_angle@ <- shell .angle!
+		-2 lt .vel.z!
+		<- shooter .aim_angle@ anglexy 2 ( <- SHELL SPEED ) xymul <- shell .vel!
+		// formerly 3 shell speed above
+		-4 lt .pos.z!
+		<- shooter .aim_angle@ anglexy 16 xymul <- shell .pos xyadd <- shell .pos!
+
+		weapons_base_id MELEE6 + 0x 34 + <- shell .spriteid!
+
+		60 lt .timer! // Grenade is 120
+	;
+
+	: fire-grenade spawn lt args( me shell )
+		<- shell <- me lt-to-thing
+		<- me <- shell setup-grenade-shell
+
+		<- shell .pos
+
+		particle{
+			new pos!
+			15 ticks!
+			<- me .aim_angle@ angle!
+			glowy
+			0.8 grow!
+			3 fade_out!
+			particles_base_id 0x 51 + spriteid!
+			0 angle@ + anglexy  vel!
+			gameticks angle!
+			2 scale!
+			1 0.5 0 rgb!
+		}
+
+		5 lt .pos ticklight 1 0.5 0 <- shell .clr!
+
+		sfx{ noise 200 freq! 300 freq2! 2 a! 100 d! 0.2 s! 500 r! 500 filt! 500 filt_high! 0 q! 2 scale! <- me .adjust-vol }
+
+		5 rumble
+
+		-25 <- me .shudder!
+		-15 <- me .weapon_state.reach! // -15
+
+
+		15 <- me .shudder!
+	;
+
+	:noname args( me eventid )
+		<- eventid THING_EVENT_ANIMATE = if
+			<- me .anim.state@ if then;
+		then;
+
+		<- me .action_cooldown@ if then;
+
+		<- eventid THING_EVENT_SHOOT = if
+			<- me fire-grenade
+			<- me .useanammo
+			BAZOOKA_COOLDOWN <- me .action_cooldown!
+		then;
+	;
+
+	wielder_handler: last
+
+root{
+: #glaunch glaunch .item.charges! ;
+: glaunch 6 #glaunch ; }
+
+custom: Orbal Cannon
+	weapon: titacannon
+	spriteid: MELEE7 83 +
+
+	chargename: Shells
+
+	ammo_type: 0
+	power: 1
+	cooldown: 1
+	targeting: 0
+	func: WEAPON_FUNC_CUSTOM_AIMING
+	melee_aiming: 0
+	reload: 0
+	lock_drift: 0.001
+
+	stack_max: 100
+	stack_as_charges: 1
+	stack_no_show: 1
+	shoot_thru_scale: 1
+	// lowestmelee
 
 	melee_start_angle: 0
 	melee_windup_angle: -90

@@ -19,6 +19,7 @@ uses events/sc/horse.df
 uses events/sc/lnk.df
 uses events/sc/estelle.df
 uses events/sc/anelace.df
+uses events/sc/tita.df
 
 // Main road event handler code
 events{ road{

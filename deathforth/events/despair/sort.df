@@ -109,6 +109,9 @@ events{ road{
 		bully-st 131 = if
 			anelace-despair
 		then;
+		bully-st 133 = if
+			tita-despair
+		then;
 		despair-deck-draw
 	;
 

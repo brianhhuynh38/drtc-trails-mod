@@ -24,6 +24,7 @@ events{ road{
 		card: kaiju-scget
 		card: estelle-test
 		card: anelace-test
+		card: tita-test
 	constant SPECIALCHARGOOD-DECK
 	SPECIALCHARGOOD-DECK var specialchargood-deck
 

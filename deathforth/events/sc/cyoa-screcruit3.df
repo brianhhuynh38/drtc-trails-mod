@@ -336,6 +336,29 @@ cyoa: anelace-test
 		choice( "No...?" )choice
 ;
 
+cyoa: tita-recruit
+	ricon
+	($ Thegroup .. " catch up to the little girl and learn she is a young mechanic who got lost. " .. Thegroup .. " asks if 
+	she would want to join the party. With no other choice available to her, Tita decides to 
+	join your party and gets in the car. She seems to be really interested by the dashboard." $) cyoa-text! goodfx
+	team-count 3 > if
+		"Boot someone from the team to make room:" +crtext 4 trunk-food+ recruit-replace?
+	then;
+	recruitee .mechanicREV recruitee .witsREV recruitee .temperREV recruitee .shootingREV
+	recruited
+;
+
+cyoa: tita-test
+	"Star of Zeiss" cyoa-title!
+	char-gen to recruitee
+	"Tita" recruitee .name!
+	ricon
+	4 recruitee .morale! recruitee .titaify
+	($ Thegroup .. " finds a little girl fighting a horde of zombies. Suddenly, she blasts a 
+	giant gaping hole in the horde with some kind of mech that seemingly appeared out of nowhere, then runs away." $) cyoa-text! basic-tone
+		choice( "Chase after her" )choice: tita-recruit
+		choice( "She'll be fine" )choice
+;
 
 } }
 
