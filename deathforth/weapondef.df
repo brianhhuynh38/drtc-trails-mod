@@ -5880,11 +5880,11 @@ custom: Orbal Cannon
 	heavycooldown
 	ai_mule
 
-	20 constant GLAUNCH_COOLDOWN // formerly 30, wanted to make it faster than bazooka
-	GLAUNCH_COOLDOWN 5 + constant GRENADE_TIME
+	20 constant OLAUNCH_COOLDOWN // formerly 30, wanted to make it faster than bazooka
+	OLAUNCH_COOLDOWN 5 + constant GRENADE_TIME
 
 
-	: _grenade-shell-events args( me eventid )
+	: _orbal-shell-events args( me eventid )
 
 		<- eventid THING_EVENT_BOUNCE = if
 			<- me .angle@ <- me .rot@ + <- me .angle!
@@ -5892,14 +5892,14 @@ custom: Orbal Cannon
 
 		<- eventid THING_EVENT_TIMER = if
 		// <- eventid THING_EVENT_BUMP = or - Removed due to making it way dangerous
-			<- me .pos 1 xypowboom // grenade is 5, pipebomb is 2, lbomb is 1
+			<- me .pos 1 xyfart // grenade is 5, pipebomb is 2, lbomb is 1
 			<- me silentkillit
 			then
 	;
 
 	// Mostly adapted from grenade weapon
-	: setup-grenade-shell args( shooter shell )
-		' _grenade-shell-events <- shell .events!
+	: setup-orbal-shell args( shooter shell )
+		' _orbal-shell-events <- shell .events!
 
 		1 <- shell .mass!
 		15 <- shell .hitpoints!
@@ -5911,19 +5911,18 @@ custom: Orbal Cannon
 
 		<- shooter .aim_angle@ <- shell .angle!
 		-2 lt .vel.z!
-		<- shooter .aim_angle@ anglexy 2 ( <- SHELL SPEED ) xymul <- shell .vel!
-		// formerly 3 shell speed above
+		<- shooter .aim_angle@ anglexy 3 ( <- SHELL SPEED ) xymul <- shell .vel!
 		-4 lt .pos.z!
 		<- shooter .aim_angle@ anglexy 16 xymul <- shell .pos xyadd <- shell .pos!
 
-		weapons_base_id MELEE6 + 0x 34 + <- shell .spriteid!
+		weapons_base_id MELEE6 0x 2 + <- shell .spriteid!
 
 		60 lt .timer! // Grenade is 120
 	;
 
-	: fire-grenade spawn lt args( me shell )
+	: fire-cannon spawn lt args( me shell )
 		<- shell <- me lt-to-thing
-		<- me <- shell setup-grenade-shell
+		<- me <- shell setup-orbal-shell
 
 		<- shell .pos
 
@@ -5962,8 +5961,8 @@ custom: Orbal Cannon
 		<- me .action_cooldown@ if then;
 
 		<- eventid THING_EVENT_SHOOT = if
-			<- me fire-grenade
-			<- me .useanammo
+			<- me fire-cannon
+			// <- me .useanammo
 			BAZOOKA_COOLDOWN <- me .action_cooldown!
 		then;
 	;
@@ -5971,8 +5970,8 @@ custom: Orbal Cannon
 	wielder_handler: last
 
 root{
-: #glaunch glaunch .item.charges! ;
-: glaunch 6 #glaunch ; }
+: #titacannon titacannon .item.charges! ;
+: titacannon 100 #titacannon ; }
 
 
 custom: Landmine
