@@ -1,0 +1,22 @@
+
+cyoa{ road{
+
+cyoa: tita-despair
+	bully choosechar cicon
+
+		"Tita Sad" cyoa-title!
+		($ cname .. " is not really feeling it.
+		" .. " No orbments, lots of zombies, lots of death... I kind of like Zeiss better... " rbold $) cyoa-text! 
+		solo if 
+			($ "And so, the trip to Canada was abandoned.
+			" .. "THE TRIP TO CANADA IS OVER" rbold $) +cr +text
+		else
+			($ "She waves goodbye to everyone, then jumps through a portal that leads back to the Zemurian continent.
+			" .. cname .. " has left the team!" $) +cr +text
+		then
+		decruit-bad
+;
+
+} }
+
+

@@ -338,9 +338,9 @@ cyoa: anelace-test
 
 cyoa: tita-recruit
 	ricon
-	($ Thegroup .. " catch up to the little girl and learn she is a young mechanic who got lost. " .. Thegroup .. " asks if 
-	she would want to join the party. With no other choice available to her, Tita decides to 
-	join your party and gets in the car. She seems to be really interested by the dashboard." $) cyoa-text! goodfx
+	($ Thegroup .. " catches up to the little girl and learns she is a young mechanic who got lost. " .. Thegroup .. " asks if she would want to join the party.
+	With no other choice available to her, Tita decides to join your party and gets in the car.
+	She seems to be really interested by the dashboard." $) cyoa-text! goodfx
 	team-count 3 > if
 		"Boot someone from the team to make room:" +crtext 4 trunk-food+ recruit-replace?
 	then;

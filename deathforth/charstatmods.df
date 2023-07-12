@@ -771,24 +771,24 @@ dup constant MOD_COUNT modcount?!
 		; last command!
 
 	MOD_TITA #set
-		//: titasay 1 1 rnd case
-		//	1 of "HAAAAAGHH!" endof
-		//endcase ;
+		: titasay 1 1 rnd case
+			1 of "FIRE!" endof
+		endcase ;
 
-		//: goodtogo
-		//	// me .action_cooldown@ if exit then
-		//	// 40 me .action_cooldown!
-		//	($ RAINBOW .. estellesay $) me .yellmsg
-		//;
+		: ahhhh
+			// me .action_cooldown@ if exit then
+			// 40 me .action_cooldown!
+			($ RAINBOW .. titasay $) me .yellmsg
+		;
 
-		: swap-form-commands to me
+		: swap-attack-commands to me
 			me .isswap? not if 0 me .slotuse! then;
 			($ "Orbal gear...?" $) me .yellmsg
 		; last command!
 
-		//: estelle-commands to eventid to me
-		//	eventid THING_EVENT_SWING = if goodtogo then
-		//; last animate!
+		: tita-commands to eventid to me
+			eventid THING_EVENT_SWING = if ahhhh then
+		; last animate!
 
 	MOD_SHODUKIN #set
 		mission{
@@ -1582,6 +1582,7 @@ char-event: valk-main-events
 	"A mechanic at the Zeiss Central Factory with a real knack for anything orbal. This may not apply to electricity." over .job!
 	1 over .carrying.slot_count!
 	WEAPON_TITACANNON over .weapona!
+	1 over .stackeda!
 	1 over .weapon_nodropa!
 	statmod{ MOD_TITA over .setmod } dup .swapspecial
 	drop
