@@ -5864,7 +5864,7 @@ custom: Orbal Cannon
 	stack_as_charges: 1
 	stack_no_show: 1
 	shoot_thru_scale: 1
-	// lowestmelee
+	lowestmelee
 
 	melee_start_angle: 0
 	melee_windup_angle: -90
@@ -5892,7 +5892,7 @@ custom: Orbal Cannon
 
 		<- eventid THING_EVENT_TIMER = if
 		// <- eventid THING_EVENT_BUMP = or - Removed due to making it way dangerous
-			<- me .pos 1 xyfart // grenade is 5, pipebomb is 2, lbomb is 1
+			<- me .pos 1 xypowboom // grenade is 5, pipebomb is 2, lbomb is 1
 			<- me silentkillit
 			then
 	;
@@ -5911,11 +5911,11 @@ custom: Orbal Cannon
 
 		<- shooter .aim_angle@ <- shell .angle!
 		-2 lt .vel.z!
-		<- shooter .aim_angle@ anglexy 3 ( <- SHELL SPEED ) xymul <- shell .vel!
+		<- shooter .aim_angle@ anglexy 2 ( <- SHELL SPEED ) xymul <- shell .vel!
 		-4 lt .pos.z!
 		<- shooter .aim_angle@ anglexy 16 xymul <- shell .pos xyadd <- shell .pos!
 
-		weapons_base_id MELEE6 2 + <- shell .spriteid!
+		weapons_base_id MELEE6 + 0x 2 + <- shell .spriteid!
 
 		60 lt .timer! // Grenade is 120
 	;
