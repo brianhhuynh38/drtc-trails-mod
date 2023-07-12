@@ -559,6 +559,12 @@ last to batdrac
 
 last to dracbat
 
+// TITA TRANSFORMATION
+// ====================
+
+defer titatogear
+defer geartotita
+
 : .grimreaperify args( chara )
 	"Grim Reaper" <- chara .name!
 	84 <- chara .specialtype!
