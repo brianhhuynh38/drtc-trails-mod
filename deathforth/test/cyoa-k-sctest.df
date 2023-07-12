@@ -35,7 +35,7 @@ cyoa: gimmechar2b
 
 		choice( "Estelle" )choice: estelle-test
 		choice( "Anelace" )choice: anelace-test
-		choice( "Sumo" )choice: sumo-test
+		choice( "Tita" )choice: tita-test
 		choice( "Turkey" )choice: turkey-test
 
 ;

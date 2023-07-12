@@ -35,6 +35,7 @@ uses blurb/sc/hnk.df
 uses blurb/sc/samedi.df
 uses blurb/sc/estelle.df
 uses blurb/sc/anelace.df
+uses blurb/sc/tita.df
 
 uses blurb/sc/beeman.df
 uses blurb/sc/bard.df
@@ -194,6 +195,9 @@ defer blurbcard
 	then;
 	1st-st 131 = if
 		blurb-anelace-deck depths 0= if BLURB-ANELACE-DECK shuffles to blurb-anelace-deck then 
+	then;
+	1st-st 133 = if
+		blurb-tita-deck depths 0= if BLURB-TITA-DECK shuffles to blurb-tita-deck then 
 	then;
 	
 	1st-st 92 = 1st-st 94 = or if onesaying-start then;

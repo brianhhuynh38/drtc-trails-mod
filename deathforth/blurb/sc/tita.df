@@ -1,0 +1,33 @@
+	: TITA-oneline1 "You guys still use gunpowder? I thought that was obsolete..." ;
+	: TITA-oneline2 "How come the car smells so bad when we start it up?" ;
+	: TITA-oneline3 "Where is Agate I wonder..." ;
+	: TITA-oneline4 "It's nice that I can till use the Orbal Gear at least." ;
+	: TITA-oneline5 "Escalators are normal here???" ;
+	: TITA-oneline6 "Electricity for power? Is it good?" ;
+	: TITA-oneline7 "My combat orbment isn't responding..." ;
+
+	deck-new
+		card: TITA-oneline1
+		card: TITA-oneline2
+		card: TITA-oneline3
+		card: TITA-oneline4
+		card: TITA-oneline5
+		card: TITA-oneline6
+		card: TITA-oneline7
+	constant TITA-ONELINERS
+	TITA-ONELINERS var tita-oneliners
+	TITA-ONELINERS shuffles to tita-oneliners
+
+: tita-oneliner
+	tita-oneliners depths 0= if TITA-ONELINERS shuffles to tita-oneliners then
+	blurbslot 0= if
+		drawcard blurbsay
+	then
+;
+
+	deck-new
+	7 cards: tita-oneliner
+
+	constant BLURB-TITA-DECK
+	BLURB-TITA-DECK var blurb-tita-deck
+	BLURB-TITA-DECK shuffles to blurb-tita-deck

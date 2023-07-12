@@ -770,6 +770,26 @@ dup constant MOD_COUNT modcount?!
 			me .attack
 		; last command!
 
+	MOD_TITA #set
+		//: titasay 1 1 rnd case
+		//	1 of "HAAAAAGHH!" endof
+		//endcase ;
+
+		//: goodtogo
+		//	// me .action_cooldown@ if exit then
+		//	// 40 me .action_cooldown!
+		//	($ RAINBOW .. estellesay $) me .yellmsg
+		//;
+
+		: swap-form-commands to me
+			me .isswap? not if 0 me .slotuse! then;
+			($ "Orbal gear...?" $) me .yellmsg
+		; last command!
+
+		//: estelle-commands to eventid to me
+		//	eventid THING_EVENT_SWING = if goodtogo then
+		//; last animate!
+
 	MOD_SHODUKIN #set
 		mission{
 		thing-event: shodukin-glow
