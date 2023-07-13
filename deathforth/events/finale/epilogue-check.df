@@ -263,7 +263,9 @@ dog-personality-endsay-base shuffles var dog-personality-endsay
 	<- char .specialtype@ 105 = if "Another win for 100% American Can-Do-ism!" then;
 	<- char .specialtype@ 106 = if "My log says this is a good place to stay." then;
 	<- char .specialtype@ 108 = if "Yarrrr!" then;
-	<- char .specialtype@ 130 = if "Aw nice, I got 12 BP fo this one!" then;
+	<- char .specialtype@ 130 = if "Aw nice, I got 12 BP for this one!" then;
+	<- char .specialtype@ 131 = if "Those zombies weren't very cute ngl" then;
+	<- char .specialtype@ 133 = if "I should get back to Zeiss..." then;
 	<- char .charbro? 		   if "Good Grief! TRANSLATOR'S NOTE: THIS LOOSELY MEANS 'YARE YARE DAZE'" then;
 	<- char .broom?            if "I have a confession to make... I was actually a broom the entire time." then;
 	<- char .saguts?		   if "I-GER UPPERCUT!" then;
@@ -552,7 +554,9 @@ dog-skill-endsay-base shuffles var dog-skill-endsay
 	<- char .specialtype@ 104 = <- char .specialtype@ 105 = or if "quietly and sheepishly applied for Canadian citizenship.*" then;
 	<- char .specialtype@ 106 = if "helped the mounties develop powerful log-based anti-zombie technology.*" then;
 	<- char .specialtype@ 108 = if "built a pirate ship and became the terror of Lake Ontario.*" then;
-	<- char .specialtype@ 130 = if "went back to Liberl to report her quest completion to get a promotion to A-rank.*" then; 
+	<- char .specialtype@ 130 = if "went back to Liberl to report her quest completion to get a promotion to A-rank.*" then;
+	<- char .specialtype@ 131 = if "went back to Liberl to rejoin Kurt in patrolling Grancel. Also to get ice cream... again.*" then; 
+	<- char .specialtype@ 133 = if "went back to Zeiss City so she could continue her training.*" then; 
 	<- char .charbro? 		   if "finally, FINALLY gets to kick a football.*" then;
 	<- char .broom?			   if "gets stuck in a broom closet, but in Canada this time.*" then;
 	<- char .saguts?		   if "quits his job as a tournament fighter and starts selling a popular designer eyepatches.*" then;

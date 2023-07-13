@@ -214,6 +214,9 @@ var shieldofhope-saying-stack
 	<- chara .specialtype@ 20 = if RED "For the bees!" .. <- chara thingyell then;
 	<- chara .specialtype@ 90 = if RED "I hope you all burn!" .. <- chara thingyell then;
 	<- chara .specialtype@ 130 = if RED "I'm sorry..." .. <- chara thingyell then;
+	<- chara .specialtype@ 131 = if RED "But I didn't..." .. <- chara thingyell then;
+	<- chara .specialtype@ 132 = if RED "Wait, this wasn't in the canon!" .. <- chara thingyell then;
+	<- chara .specialtype@ 133 = if RED "N-nooo..." .. <- chara thingyell then;
 	
 	// Default sayings, if none of above apply
 	70 %chance if

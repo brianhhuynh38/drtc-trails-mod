@@ -771,19 +771,27 @@ dup constant MOD_COUNT modcount?!
 		; last command!
 
 	MOD_TITA #set
-		: titasay 1 1 rnd case
+
+		0 value cp
+
+		: titasay 1 2 rnd case
 			1 of "FIRE!" endof
+			2 of "AHHH!" endof
 		endcase ;
 
 		: ahhhh
 			// me .action_cooldown@ if exit then
 			// 40 me .action_cooldown!
 			($ RAINBOW .. titasay $) me .yellmsg
+			' cp ++
 		;
 
 		: swap-attack-commands to me
 			me .isswap? not if 0 me .slotuse! then;
-			($ "Orbal gear...?" $) me .yellmsg
+			cp 10 < if
+				($ "Orbal gear...? (" .. cp .. "/10) " $) me .yellmsg
+			else
+				($ RAINBOW .. "ORBAL GEAR!!! (" .. cp .. "/10) " $) me .yellmsg 0 to cp then
 		; last command!
 
 		: tita-commands to eventid to me
