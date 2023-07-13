@@ -5915,7 +5915,7 @@ custom: Orbal Cannon
 		-4 lt .pos.z!
 		<- shooter .aim_angle@ anglexy 16 xymul <- shell .pos xyadd <- shell .pos!
 
-		weapons_base_id MELEE6 + 0x 2 + <- shell .spriteid!
+		weapons_base_id MELEE6 + 0x 3 + <- shell .spriteid!
 
 		60 lt .timer! // Grenade is 120
 	;
