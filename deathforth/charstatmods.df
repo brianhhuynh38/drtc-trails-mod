@@ -787,7 +787,7 @@ dup constant MOD_COUNT modcount?!
 		; last command!
 
 		: tita-commands to eventid to me
-			eventid THING_EVENT_SWING = if ahhhh then
+			eventid THING_EVENT_SHOOT = if ahhhh then
 		; last animate!
 
 	MOD_SHODUKIN #set
